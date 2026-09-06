@@ -1,0 +1,16 @@
+:root {
+  /* Paleta Azul/Navy */
+  --primary-color: #0d1b2a;
+  --secondary-color: #1b263b;
+  --accent-color: #415a77;
+  --light-bg: #e0e1dd;
+  --text-color: #ffffff;
+  --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--light-bg);
+  margin: 0;
+  padding: 0;
+}
