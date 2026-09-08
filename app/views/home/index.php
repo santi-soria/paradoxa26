@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PARADOXA26 — Foro</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="../../public/css/style.css" />
 </head>
 <body>
   <div class="window" style="max-width: 1080px;">

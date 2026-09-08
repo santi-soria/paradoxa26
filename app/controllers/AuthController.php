@@ -1,18 +1,18 @@
 <?php
 
-require_once '../app/models/UserModel.php';
+require_once __DIR__ . '/../models/UserModel.php';
 
 class AuthController {
     private $userModel;
 
     public function __construct() {
-        global $conexion; 
+        global $conexion;
         $this->userModel = new UserModel($conexion);
     }
 
- 
+
     public function registerView() {
-        require_once '../app/views/auth/register.php';
+        require_once __DIR__ . '/../views/auth/register.php';
     }
     public function register() {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -21,14 +21,14 @@ class AuthController {
 
             if (empty($email) || empty($password)) {
                 $error = "Por favor completa todos los campos.";
-                require_once '../app/views/auth/register.php';
+                require_once __DIR__ . '/../views/auth/register.php';
                 return;
             }
 
             // Verificar si el correo ya existe
             if ($this->userModel->obtenerPorEmail($email)) {
                 $error = "El correo electrónico ya está registrado.";
-                require_once '../app/views/auth/register.php';
+                require_once __DIR__ . '/../views/auth/register.php';
                 return;
             }
 
@@ -38,7 +38,7 @@ class AuthController {
                 exit;
             } else {
                 $error = "Ocurrió un error al registrar el usuario.";
-                require_once '../app/views/auth/register.php';
+                require_once __DIR__ . '/../views/auth/register.php';
             }
         }
     }

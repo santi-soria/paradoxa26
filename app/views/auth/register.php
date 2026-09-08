@@ -1,4 +1,4 @@
-<?php require_once '../app/views/layout/header.php'; ?>
+<?php require_once __DIR__ . '/../layout/header.php'; ?>
 
 <div class="auth-container" style="max-width: 400px; margin: 2rem auto; padding: 2rem; background: var(--secondary-color); color: var(--text-color); border-radius: 8px;">
     <h2>Crear Cuenta</h2>
@@ -24,4 +24,4 @@
     </form>
 </div>
 
-<?php require_once '../app/views/layout/footer.php'; ?>
+<?php require_once __DIR__ . '/../layout/footer.php'; ?>
