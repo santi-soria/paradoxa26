@@ -380,9 +380,16 @@
         message.classList.add('success');
         message.innerHTML = 'Acceso concedido.<br>Cargando ambiente archivado...';
 
+        // TODO (back end): reemplazar esta credencial fija por el login
+        // real contra la base de datos (AuthController) una vez que
+        // config/conexion.php esté conectado.
         setTimeout(() => {
           message.innerHTML = 'Sesión inicializada. Módulo de archivo disponible.';
         }, 1200);
+
+        setTimeout(() => {
+          window.location.href = 'app/views/home/index.php';
+        }, 2400);
       } else {
         message.classList.remove('success');
         message.textContent = 'Acceso negado. Credenciales invalidas.';
